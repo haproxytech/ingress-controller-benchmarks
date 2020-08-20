@@ -38,6 +38,9 @@ resource "aws_instance" "k8s-benchmarks" {
 		apt-get -y upgrade
                 apt-get -y install awscli python3-pip parallel unzip
                 curl -Lo - https://github.com/haproxytech/ingress-controller-benchmarks/archive/master.tar.gz |tar -C ~ubuntu/ -xz
+                mv ~ubuntu/ingress-controller-benchmarks-master ~ubuntu/ingress-controller-benchmarks
+                mkdir -p ~ubuntu/ingress-controller-benchmarks/tmp/single
+                mkdir -p ~ubuntu/ingress-controller-benchmarks/tmp/saturate
                 printf ". ingress-controller-benchmarks/deploy/scripts/configure_k8s_cluster.sh\n" >> ~ubuntu/.profile
                 mkdir ~/.aws
                 printf "[default]\n" > ~/.aws/config
