@@ -13,7 +13,6 @@ Deploying http load generators in Kubernetes is useful as we want to take advant
 - [Ingress Controllers](#ingress-controllers)
 - [Methodology](#methodology)
 - [Results](#results)
-  - [1 Load Generator (250 concurrent requests)](#single-load-generator-250-concurrent-requests)
   - [5 Load Generators (50 concurrent requests each)](#5-load-generators-50-concurrent-requests-each)
 
 ## Prequisites
@@ -91,16 +90,6 @@ A simple echo server application has been configured with 5 pods running at star
 
 
 ## Results
-### Single load generator (250 concurrent requests)
-![alt text](graphs/single/requests.png "Requests per second")
-
-![alt text](graphs/single/latency.png "Average response time")
-
-![alt text](graphs/single/cpu.png "Maximum CPU Usage")
-
-![alt text](graphs/single/errors.png "HTTP Errors")
-
--------
 ### 5 load generators (50 concurrent requests each)
 ![alt text](graphs/saturate/requests.png "Requests per second")
 
@@ -109,4 +98,5 @@ A simple echo server application has been configured with 5 pods running at star
 ![alt text](graphs/saturate/cpu.png "Maximum CPU Usage")
 
 ![alt text](graphs/saturate/errors.png "HTTP Errors")
+-------
 
