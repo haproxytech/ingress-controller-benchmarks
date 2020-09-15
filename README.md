@@ -57,7 +57,7 @@ We will benchmark the following ingress controllers:
 
 - [Contour (Envoy based)](https://github.com/projectcontour/contour)
 - [HAProxy Ingress Controller](https://github.com/haproxytech/kubernetes-ingress)
-- [NGINX Ingress Controller](Kubernetes community)])(https://github.com/kubernetes/ingress-nginx)
+- [NGINX Ingress Controller (Kubernetes community)](https://github.com/kubernetes/ingress-nginx)
 - [NGINX Inc. Ingress Controller](https://github.com/nginxinc/kubernetes-ingress)
 - [Traefik](https://github.com/containous/traefik)
 
