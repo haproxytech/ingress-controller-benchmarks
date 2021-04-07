@@ -70,6 +70,8 @@ HELM[nginx]=ingress-nginx/ingress-nginx
 HELM[nginx-inc]=nginx-stable/nginx-ingress
 HELM[traefik]=traefik/traefik
 
+sleep 5
+
 echo "Installing ingress controllers ..."
 for C in "${!HELM[@]}"; do 
     helm ls | grep -q "$C\s"
