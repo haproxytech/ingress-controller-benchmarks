@@ -38,8 +38,8 @@ def generate_single_bar(output, reqdata, title, ylabel, add_label=False):
     plt.xticks(x_pos, proxies)
     if add_label:
         autolabel(ax, rects)
-#    plt.savefig(output)
-    plt.show()
+    plt.savefig(output)
+#    plt.show()
 
 def generate_grouped_bar(output, title, ylabel, bar1, bar2, bar3, add_label=False, percentiles=False):
     global proxies

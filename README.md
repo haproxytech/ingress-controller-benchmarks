@@ -33,7 +33,7 @@ ssh-keygen -f k8benchmarks -t rsa
 4. Run terraform
 ```
 terraform init
-terraform apply -auto-approve -var 'aws_access_key=A=<ACCESS_KEY>' -var 'aws_secret_key=<SECRET_KEY>'
+terraform apply -auto-approve -var 'aws_access_key=<ACCESS_KEY>' -var 'aws_secret_key=<SECRET_KEY>'
 ```
 5. SSH to the instance provided within the terraform output
 6. After waiting for the Kubernetes cluster to fully initialize, execute the benchmarks.

@@ -68,7 +68,7 @@ spec:
     mkdir -p /home/ubuntu/.parallel
     touch /home/ubuntu/.parallel/will-cite
     A_INIT_CMD="apt-get update && apt-get -y -f install sysstat"
-    B_INIT_CMD="apt-get update;apt-get -y -f upgrade; apt-get -y -f install curl; curl -Lo /usr/local/bin/hey https://storage.googleapis.com/hey-release/hey_linux_amd64; chmod +x /usr/local/bin/hey;"
+    B_INIT_CMD="apt-get update;apt-get -y -f upgrade; apt-get -y -f install curl; curl -Lo /usr/local/bin/hey https://hey-release.s3.us-east-2.amazonaws.com/hey_linux_amd64; chmod +x /usr/local/bin/hey;"
     echo -e "$INJECTOR_YAML" >$temp_yaml
     kubectl create ns ubuntu-injector >/dev/null 2>&1 &
     kubectl -n ubuntu-injector apply -f $temp_yaml >/dev/null 2>&1
