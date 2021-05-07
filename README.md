@@ -2,9 +2,9 @@
 
 In this guide we are going to benchmark 5 popular Ingress Controllers in Kubernetes with their default out-of-box configurations.
 Traffic is sent from "http load generators" deployed in the same cluster.
-Deploying http load generators in Kubernetes is useful as we want to take advantage of Kubernetes orchestration capabilities to easily deploy and scale injectors.
+Deploying http load generators in Kubernetes is useful as we want to take advantage of Kubernete's orchestration capabilities to easily deploy and scale injectors.
 
-**Note: While the load generators and Ingress Controllers are going to be on the same Kubernetes cluster they will provisioned on completely different nodes. We will reserve one of the nodes exclusively for running the ingress controllers.**
+**Note: While the load generators and Ingress Controllers are going to be on the same Kubernetes cluster they will be provisioned on completely different nodes. We will reserve one of the nodes exclusively for running the ingress controllers.**
 
 
 - [Prequisites](#prequisites)
@@ -48,9 +48,9 @@ terraform apply -auto-approve -var 'aws_access_key=<ACCESS_KEY>' -var 'aws_secre
 
 ## Overview
 ### Kubernetes Cluster
-This repository will launch a 6 node Kubernetes cluster use c5.xlarge instances:
+This repository will launch a 6 node Kubernetes cluster using AWS c5.xlarge type instances:
 - One worker node will be dedicated to the ingress controllers
-- The other 5 worker nodes will be used to for running the benchmarks using `hey` as well as the backend "echo" application.
+- The other 5 worker nodes will be used for running the benchmarks using `hey` as well as the backend "echo" application.
 
 ### Ingress Controllers
 We will benchmark the following ingress controllers:
@@ -62,7 +62,7 @@ We will benchmark the following ingress controllers:
 - [Traefik](https://github.com/containous/traefik)
 
 ### Out of the box
-These tests focus explicitly on testing each ingress controller with it's default out-of-box configuration.
+These tests focus explicitly on testing each ingress controller with its default out-of-box configuration.
 No system or software tunings have been made.
 
 ### Application
