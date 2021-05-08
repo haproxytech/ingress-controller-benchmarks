@@ -2,7 +2,7 @@
 
 In this guide we are going to benchmark 5 popular Ingress Controllers in Kubernetes with their default out-of-box configurations.
 Traffic is sent from "http load generators" deployed in the same cluster.
-Deploying http load generators in Kubernetes is useful as we want to take advantage of Kubernete's orchestration capabilities to easily deploy and scale injectors.
+Deploying http load generators in Kubernetes is useful as we want to take advantage of Kubernetes's orchestration capabilities to easily deploy and scale injectors.
 
 **Note: While the load generators and Ingress Controllers are going to be on the same Kubernetes cluster they will be provisioned on completely different nodes. We will reserve one of the nodes exclusively for running the ingress controllers.**
 
